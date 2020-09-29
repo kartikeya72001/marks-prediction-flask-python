@@ -12,7 +12,7 @@ def index():
 @app.route('/', methods = ["POST"])
 def marks():
     if request.method == "POST":
-        hours = int(request.form['hours'])
+        hours = float(request.form['hours'])
 
         marks = model.predict([[hours]])[0][0]
         if marks > 1000:
