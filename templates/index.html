@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Marks Prediction</title>
+        <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/main.css') }}">
+    </head>
+    <body>
+        <h1 class="head">Marks Prediction</h1>
+
+        <form method="POST" action="/">
+            <input type="text" name="hours" placeholder="Enter Hours" class="textfield">
+            <input type="submit" class="submit">
+        </form>
+        {% if your_marks %}
+            <h1 class = "marks"> Your Marks are: <strong>{{your_marks/10}}</strong>%</h1>
+        {% endif %}
+    </body>
+</html>
